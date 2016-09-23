@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoolnessIndicatorProjection.cs" />
     <Compile Include="TestProjection.cs" />
     <Compile Include="IProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

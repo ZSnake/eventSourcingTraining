@@ -79,10 +79,16 @@
     <Compile Include="RegisteredUserSession.cs" />
     <Compile Include="Services\IUserIdGenerator.cs" />
     <Compile Include="Services\SystemDateTime.cs" />
+    <Compile Include="CoolnessIndicatorRoot\CommandHandlers\CoolnessAdder.cs" />
     <Compile Include="UserRoot\CommandHandlers\TestCreator.cs" />
+    <Compile Include="CoolnessIndicatorRoot\Commands\AddCoolness.cs" />
     <Compile Include="UserRoot\Commands\CreateTest.cs" />
     <Compile Include="UserRoot\Commands\UpdateAnotherTestData.cs" />
+    <Compile Include="CoolnessIndicatorRoot\CoolnessIndicator.cs" />
+    <Compile Include="CoolnessIndicatorRoot\CoolnessIndicatorViewModel.cs" />
+    <Compile Include="CoolnessIndicatorRoot\DomainEventHandlers\BecameCoolerHandler.cs" />
     <Compile Include="UserRoot\DomainEventHandlers\TestCreatedEventHandler.cs" />
+    <Compile Include="CoolnessIndicatorRoot\DomainEvents\CoolnessAdded.cs" />
     <Compile Include="UserRoot\TestAggregateRoot.cs" />
     <Compile Include="UserRoot\TestViewModel.cs" />
     <Compile Include="IViewModelWriter.cs" />
