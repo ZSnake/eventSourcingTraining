@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Domain", "Rewardle.Boilerplate.Domain\Rewardle.Boilerplate.Domain.csproj", "{021A5877-E7D2-4FF0-993A-32CACB8E6323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Host", "Rewardle.Boilerplate.Host\Rewardle.Boilerplate.Host.csproj", "{57894169-EB83-40E5-B03E-A9AD5F0E5F06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Api", "Rewardle.Boilerplate.Api\Rewardle.Boilerplate.Api.csproj", "{816B7A11-B241-42DB-A681-9719081BBF59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Domain.Specs", "Rewardle.Boilerplate.Domain.Specs\Rewardle.Boilerplate.Domain.Specs.csproj", "{C92A104A-DFDA-465A-A0EF-B125FCB44E24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7342E207-52AA-4978-9808-8D418888FF61}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.ViewStore", "Rewardle.Boilerplate.ViewStore\Rewardle.Boilerplate.ViewStore.csproj", "{F036384F-3C54-4F85-8A12-C53DC12F47F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.ViewStoreRebuilder", "Rewardle.Boilerplate.ViewStoreRebuilder\Rewardle.Boilerplate.ViewStoreRebuilder.csproj", "{71275FC3-988E-4815-A989-20288583D718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Projections", "Rewardle.Boilerplate.Projections\Rewardle.Boilerplate.Projections.csproj", "{2A7909F6-F956-4CD5-BF04-86D7C1EA7C96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.AggregateSeeder", "Rewardle.Boilerplate.AggregateSeeder\Rewardle.Boilerplate.AggregateSeeder.csproj", "{D5D46953-786A-4FA3-A45C-D00817F19886}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Infrastructure", "Rewardle.Boilerplate.Infrastructure\Rewardle.Boilerplate.Infrastructure.csproj", "{AE14CDA6-D1DB-44EF-B0ED-B89ACFCDB91A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.CommandQueueWorker", "Rewardle.Boilerplate.CommandQueueWorker\Rewardle.Boilerplate.CommandQueueWorker.csproj", "{8F4456D0-8680-49B6-A016-47312CE28AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.EventQueueWorker", "Rewardle.Boilerplate.EventQueueWorker\Rewardle.Boilerplate.EventQueueWorker.csproj", "{7607D8BA-1822-4F9B-8F87-D9876DFE518F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Api.Specs", "Rewardle.Boilerplate.Api.Specs\Rewardle.Boilerplate.Api.Specs.csproj", "{D78D96E1-A6DF-4BF0-A1CB-5FC487CF8138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewardle.Boilerplate.Events", "Rewardle.Boilerplate.Events\Rewardle.Boilerplate.Events.csproj", "{F866ED56-A18A-49A2-B3F8-44C737CDE791}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4B366CCF-B74A-4984-9757-CB51468772BA}"
+	ProjectSection(SolutionItems) = preProject
+		connectionStrings.config = connectionStrings.config
+		logging.config = logging.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{86F1E22D-C557-4F32-A293-59E518CBDB7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{C1D8E0F1-5EA1-40DD-B974-025F6F046335}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{021A5877-E7D2-4FF0-993A-32CACB8E6323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021A5877-E7D2-4FF0-993A-32CACB8E6323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021A5877-E7D2-4FF0-993A-32CACB8E6323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021A5877-E7D2-4FF0-993A-32CACB8E6323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57894169-EB83-40E5-B03E-A9AD5F0E5F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57894169-EB83-40E5-B03E-A9AD5F0E5F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57894169-EB83-40E5-B03E-A9AD5F0E5F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57894169-EB83-40E5-B03E-A9AD5F0E5F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{816B7A11-B241-42DB-A681-9719081BBF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{816B7A11-B241-42DB-A681-9719081BBF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{816B7A11-B241-42DB-A681-9719081BBF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{816B7A11-B241-42DB-A681-9719081BBF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92A104A-DFDA-465A-A0EF-B125FCB44E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92A104A-DFDA-465A-A0EF-B125FCB44E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92A104A-DFDA-465A-A0EF-B125FCB44E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92A104A-DFDA-465A-A0EF-B125FCB44E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F036384F-3C54-4F85-8A12-C53DC12F47F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F036384F-3C54-4F85-8A12-C53DC12F47F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F036384F-3C54-4F85-8A12-C53DC12F47F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F036384F-3C54-4F85-8A12-C53DC12F47F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71275FC3-988E-4815-A989-20288583D718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71275FC3-988E-4815-A989-20288583D718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71275FC3-988E-4815-A989-20288583D718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71275FC3-988E-4815-A989-20288583D718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7909F6-F956-4CD5-BF04-86D7C1EA7C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7909F6-F956-4CD5-BF04-86D7C1EA7C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7909F6-F956-4CD5-BF04-86D7C1EA7C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7909F6-F956-4CD5-BF04-86D7C1EA7C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D46953-786A-4FA3-A45C-D00817F19886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D46953-786A-4FA3-A45C-D00817F19886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D46953-786A-4FA3-A45C-D00817F19886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D46953-786A-4FA3-A45C-D00817F19886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE14CDA6-D1DB-44EF-B0ED-B89ACFCDB91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE14CDA6-D1DB-44EF-B0ED-B89ACFCDB91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE14CDA6-D1DB-44EF-B0ED-B89ACFCDB91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE14CDA6-D1DB-44EF-B0ED-B89ACFCDB91A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4456D0-8680-49B6-A016-47312CE28AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4456D0-8680-49B6-A016-47312CE28AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4456D0-8680-49B6-A016-47312CE28AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4456D0-8680-49B6-A016-47312CE28AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7607D8BA-1822-4F9B-8F87-D9876DFE518F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7607D8BA-1822-4F9B-8F87-D9876DFE518F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7607D8BA-1822-4F9B-8F87-D9876DFE518F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7607D8BA-1822-4F9B-8F87-D9876DFE518F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78D96E1-A6DF-4BF0-A1CB-5FC487CF8138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78D96E1-A6DF-4BF0-A1CB-5FC487CF8138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78D96E1-A6DF-4BF0-A1CB-5FC487CF8138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78D96E1-A6DF-4BF0-A1CB-5FC487CF8138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F866ED56-A18A-49A2-B3F8-44C737CDE791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F866ED56-A18A-49A2-B3F8-44C737CDE791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F866ED56-A18A-49A2-B3F8-44C737CDE791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F866ED56-A18A-49A2-B3F8-44C737CDE791}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57894169-EB83-40E5-B03E-A9AD5F0E5F06} = {C1D8E0F1-5EA1-40DD-B974-025F6F046335}
+		{71275FC3-988E-4815-A989-20288583D718} = {86F1E22D-C557-4F32-A293-59E518CBDB7B}
+		{D5D46953-786A-4FA3-A45C-D00817F19886} = {86F1E22D-C557-4F32-A293-59E518CBDB7B}
+		{8F4456D0-8680-49B6-A016-47312CE28AE4} = {C1D8E0F1-5EA1-40DD-B974-025F6F046335}
+		{7607D8BA-1822-4F9B-8F87-D9876DFE518F} = {C1D8E0F1-5EA1-40DD-B974-025F6F046335}
+	EndGlobalSection
+EndGlobal

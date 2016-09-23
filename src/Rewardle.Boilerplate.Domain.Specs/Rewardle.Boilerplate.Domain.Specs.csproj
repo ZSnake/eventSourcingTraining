@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C92A104A-DFDA-465A-A0EF-B125FCB44E24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rewardle.Boilerplate.Domain.Specs</RootNamespace>
+    <AssemblyName>Rewardle.Boilerplate.Domain.Specs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AcklenAvenue.Commands">
+      <HintPath>..\..\lib\AcklenAvenue.Commands.1.0.2.12\lib\net45\AcklenAvenue.Commands.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcklenAvenue.EventSourcing, Version=1.0.3.26, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AcklenAvenue.EventSourcing.1.0.3.26\lib\net45\AcklenAvenue.EventSourcing.dll</HintPath>
+    </Reference>
+    <Reference Include="AcklenAvenue.EventSourcing.Serializer.JsonNet, Version=1.0.3.23, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AcklenAvenue.EventSourcing.Serializer.JsonNet.1.0.3.23\lib\net45\AcklenAvenue.EventSourcing.Serializer.JsonNet.dll</HintPath>
+    </Reference>
+    <Reference Include="AcklenAvenue.Queueing, Version=1.0.1.23, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AcklenAvenue.Queueing.1.0.1.23\lib\net45\AcklenAvenue.Queueing.dll</HintPath>
+    </Reference>
+    <Reference Include="AcklenAvenue.Queueing.Amazon.Sqs">
+      <HintPath>..\..\lib\AcklenAvenue.Queueing.Amazon.Sqs.1.0.1.23\lib\net45\AcklenAvenue.Queueing.Amazon.Sqs.dll</HintPath>
+    </Reference>
+    <Reference Include="AcklenAvenue.Queueing.LocalFile">
+      <HintPath>..\..\lib\AcklenAvenue.Queueing.LocalFile.1.0.1.23\lib\net45\AcklenAvenue.Queueing.LocalFile.dll</HintPath>
+    </Reference>
+    <Reference Include="AcklenAvenue.Queueing.Serializers.JsonNet, Version=1.0.1.23, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\AcklenAvenue.Queueing.Serializers.JsonNet.1.0.1.23\lib\net45\AcklenAvenue.Queueing.Serializers.JsonNet.dll</HintPath>
+    </Reference>
+    <Reference Include="AcklenAvenue.Testing">
+      <HintPath>..\..\lib\AcklenAvenue.Testing.1.1.0.5\lib\net45\AcklenAvenue.Testing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcklenAvenue.Testing.Moq">
+      <HintPath>..\..\lib\AcklenAvenue.Testing.Moq.1.1.0.5\lib\net40\AcklenAvenue.Testing.Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AcklenAvenue.Testing.Moq.ExpectedObjects">
+      <HintPath>..\..\lib\AcklenAvenue.Testing.Moq.ExpectedObjects.1.1.0.5\lib\net45\AcklenAvenue.Testing.Moq.ExpectedObjects.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\..\lib\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK">
+      <HintPath>..\..\lib\AWSSDK.2.3.44.0\lib\net45\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="BlingBag, Version=1.4.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\BlingBag.1.4.0.14\lib\net45\BlingBag.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\lib\Common.Logging.3.2.0\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Common.Logging.Core.3.2.0\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpectedObjects, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ExpectedObjects.1.2.2\lib\net40\ExpectedObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="FizzWare.NBuilder">
+      <HintPath>..\..\lib\NBuilder.3.0.1.1\lib\FizzWare.NBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions, Version=3.4.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\FluentAssertions.3.4.0\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=3.4.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\FluentAssertions.3.4.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\lib\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Machine.Specifications, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Machine.Specifications.0.9.2\lib\net45\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Clr4, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Machine.Specifications.0.9.2\lib\net45\Machine.Specifications.Clr4.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Should">
+      <HintPath>..\..\lib\Machine.Specifications.Should.0.7.2\lib\net45\Machine.Specifications.Should.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\..\lib\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewardle.Accounts.Events, Version=1.0.573.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Rewardle.Accounts.Events.1.0.573.0\lib\net45\Rewardle.Accounts.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewardle.Bootstrapping">
+      <HintPath>..\..\lib\Rewardle.Bootstrapping.1.0.2.20\lib\net45\Rewardle.Bootstrapping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Rewardle.Businesses.Events, Version=1.0.573.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Rewardle.Businesses.Events.1.0.573.0\lib\net45\Rewardle.Businesses.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewardle.Core.Domain, Version=1.0.622.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Rewardle.Core.Domain.1.0.622.0\lib\net45\Rewardle.Core.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewardle.Core.Infrastructure, Version=1.0.622.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Rewardle.Core.Infrastructure.1.0.622.0\lib\net45\Rewardle.Core.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewardle.Identity.Helpers, Version=1.0.491.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Rewardle.Identity.Helpers.1.0.491.0\lib\net45\Rewardle.Identity.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="when_adding_a_new_name_to_a_test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rewardle.Boilerplate.Domain\Rewardle.Boilerplate.Domain.csproj">
+      <Project>{021A5877-E7D2-4FF0-993A-32CACB8E6323}</Project>
+      <Name>Rewardle.Boilerplate.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rewardle.Boilerplate.Events\Rewardle.Boilerplate.Events.csproj">
+      <Project>{F866ED56-A18A-49A2-B3F8-44C737CDE791}</Project>
+      <Name>Rewardle.Boilerplate.Events</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

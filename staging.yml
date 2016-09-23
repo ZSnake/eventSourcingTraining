@@ -1,0 +1,105 @@
+# Reference: http://www.appveyor.com/docs/appveyor-yml
+
+environment:
+  environment: staging
+  
+version: 1.0.{build}
+branches:
+  only:
+    - staging
+
+# Operating system (build VM template)
+#os: Windows Server 2012
+
+# scripts that are called at very beginning, before repo cloning
+init:
+  - git config --global core.autocrlf input
+
+install:
+  - npm -g install npm@2
+  - npm install -g gulp
+  - npm install
+#  - nuget sources add -Name AcklenAvenue -Source https://ci.appveyor.com/nuget/acklenavenue -UserName nuget@acklenavenue.com -Password @ckl3n@v3nu3
+
+nuget:
+  account_feed: true
+  disable_publish_on_pr: true
+  
+# clone directory
+# clone_folder: c:\projects\myproject
+
+# enable service required for build/tests
+#services:
+#  - mssql2012sp1        # start SQL Server 2012 SP1 Express
+#  - iis                 # start IIS
+
+# enable patching of AssemblyInfo.* files
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+cache:
+  - lib -> src\**\packages.config
+
+# scripts to run before build
+before_build:
+  #- rake dbCreate
+
+# scripts to run after build
+after_build:
+  - gulp package
+
+# to run your custom scripts instead of automatic MSBuild
+build_script:  
+  - gulp build  
+  - gulp compile-specs
+build:
+
+# to run your custom scripts instead of automatic tests
+# test_script:
+
+test:
+  assemblies:
+    - build\*.Specs.dll
+
+artifacts:
+  - path: deploy\Rewardle.Identity.Host*.zip
+    name: identity_api
+  - path: deploy\Rewardle.Identity.EventQueueWorker*.zip
+    name: identity_events
+  - path: deploy\Rewardle.Identity.CommandQueueWorker*.zip
+    name: identity_commands
+  - path: deploy\Rewardle.Identity.AggregateSeeder*.zip
+    name: identity_eventStoreRebuilder
+  - path: deploy\Rewardle.Identity.ViewStoreRebuilder*.zip
+    name: identity_viewStoreRebuilder
+
+# scripts to run before deployment
+#before_deploy:
+#  - gulp rebuild_view_models
+
+# scripts to run after deployment
+after_deploy:
+
+# to run your custom scripts instead of provider deployments
+deploy_script:
+#  - rake deployDev
+
+deploy:
+  - provider: Environment
+    name: Rewardle.Staging
+    artifacts: identity_eventStoreRebuilder, identity_viewStoreRebuilder, identity_events, identity_commands, identity_api
+  
+# on successful build
+on_success:
+
+  
+# on build failure
+on_failure:
+  
+notifications:
+  - provider: Webhook
+    url: http://appharborservicehookendpoint.apphb.com/build/appveyor/rewardle

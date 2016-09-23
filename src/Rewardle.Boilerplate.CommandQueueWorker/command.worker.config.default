@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<appSettings>
+  <add key="command-dispatcher-async" value="false" />
+  <add key="event-dispatcher-async" value="true" />
+  <add key="Environment" value="dev" />
+  <add key="EventStoreTableName" value="aggregateEvents" />
+  <add key="commandQueueFilename" value="c:\\projects\\rewardle.boilerplate\\queue\\commandQueue.json" />
+  <add key="eventQueueFilename" value="c:\\projects\\rewardle.boilerplate\\queue\\eventQueue.json" />
+  <add key="commandQueue" value="Rewardle_Boilerplate_Commands" />
+  <add key="eventQueue" value="Rewardle_Boilerplate_Events" />
+  <add key="awsAccessKeyId" value="AKIAICDZWES32E4QZQNA" />
+  <add key="awsSecretAccessKey" value="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" />
+  <add key="sqsServiceUrl" value="http://sqs.us-west-2.amazonaws.com" />
+  <add key="snsServiceUrl" value="http://sns.us-west-2.amazonaws.com" />
+  <add key="snsEventTopicArn_local" value="arn:aws:sns:us-west-2:487799950875:Rewardle_local" />
+  <add key="snsEventTopicArn_dev" value="arn:aws:sns:us-west-2:487799950875:Rewardle_Dev" />
+  <add key="snsEventTopicArn_staging" value="arn:aws:sns:us-west-2:487799950875:Rewardle_Staging" />
+  <add key="snsEventTopicArn_release" value="arn:aws:sns:us-west-2:487799950875:Rewardle_Release" />
+  <add key="UseFileQueue" value="false" />
+</appSettings>

@@ -1,0 +1,33 @@
+{
+  "name": "rewardle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulp.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AcklenAvenue/rewardle.git"
+  },
+  "author": "AcklenAvenue",
+  "bugs": {
+    "url": "https://github.com/AcklenAvenue/rewardle/issues"
+  },
+  "homepage": "https://github.com/AcklenAvenue/rewardle",
+  "devDependencies": {
+    "async": "^1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-clean": "^0.3.1",
+    "gulp-debug": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-tap": "^0.1.3",
+    "gulp-util": "^3.0.4",
+    "gulp-zip": "^3.0.2",
+    "lodash": "^3.9.1",
+    "merge-stream": "^0.1.8",
+    "reftroll": "^1.0.29",
+    "run-sequence": "^1.1.0",
+    "through2": "^0.6.5"
+  }
+}
